@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './Intro.css';
 import Image from '../../img/355.jpg';
 import Imagez from '../../img/bib.jpeg';
-import Resume from "../../img/Saithukha_myatthu.pdf";
+import Resume from "../../img/Saithukhamyatthu.pdf";
 import {Link} from 'react-scroll';
 import { motion, useAnimation } from 'framer-motion';
 import {useInView} from "react-intersection-observer";

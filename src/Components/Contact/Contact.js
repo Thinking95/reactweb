@@ -11,8 +11,6 @@ import { motion, useAnimation } from 'framer-motion';
 import {useInView} from "react-intersection-observer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useForm } from 'react-hook-form';
-import { data } from 'jquery';
 
 const Contact = () => {
   window.onload=function(){
@@ -41,10 +39,6 @@ const Contact = () => {
        }, 300);
      });
   }
-
-  const {register, handleSubmit, formState: {errors}} = useForm();
-
-
 
   const difftoast = () => {
     toast.success("Your Message has been sent!");
@@ -105,7 +99,6 @@ const Contact = () => {
   });
     e.target.reset()
   };
-  
   return (
         <div className="contain" id='contact'>
         <div className="formm" ref={ref}>
@@ -132,17 +125,17 @@ const Contact = () => {
                 <span className="mkm">m.me/sai.thukha.1</span>
               </div>
             </div>
-          <form className="formBx" ref={form} onSubmit={handleSubmit(sendEmail)} >
+          <form className="formBx" ref={form} onSubmit={sendEmail} >
             <div className="inputBox">
-              <input type="text" name="from_name" required="required"/>
-              <span className="no">Name</span> {errors.name && (<small className="text-danger">Name is Required</small>)}
+              <input type="text" name="from_name" required="required" />
+              <span className="no">Name</span>
             </div>
             <div className="inputBox">
-              <input type="email" name="from_name" required="required"/>
+              <input type="email" name="from_name" required="required" />
               <span className="no">Email</span>
             </div>
             <div className="inputBox">
-              <input type="text" name="message" required="required"/>
+              <input type="text" name="message" required="required" />
               <span className="no">Subject</span>
             </div>
             <div className="inputBox">
